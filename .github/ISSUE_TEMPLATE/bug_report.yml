@@ -1,0 +1,25 @@
+name: Bug report
+description: Something doesn't work as documented
+labels: [bug]
+body:
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Extension version and Keycloak version
+      placeholder: extension 1.0.0, Keycloak 26.8.2
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did (requests, configuration), what you expected, and what happened instead
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant Keycloak log lines (set com.cloudiam to DEBUG). Remove tokens and secrets.
+      render: text
