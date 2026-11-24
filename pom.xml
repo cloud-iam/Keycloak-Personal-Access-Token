@@ -37,7 +37,7 @@
 
         <keycloak.version>26.8.2</keycloak.version>
 
-        <assertj-core.version>3.27.3</assertj-core.version>
+        <assertj-core.version>3.27.7</assertj-core.version>
         <jacoco.version>0.8.13</jacoco.version>
         <junit-jupiter.version>5.13.0</junit-jupiter.version>
         <logback.version>1.5.21</logback.version>
