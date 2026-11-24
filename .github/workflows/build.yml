@@ -19,7 +19,7 @@ jobs:
         # 26.8.2 is the minimum: older versions do not keep PAT tokens off the Admin API.
         keycloak: ["26.8.2"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-java@v4
         with:
