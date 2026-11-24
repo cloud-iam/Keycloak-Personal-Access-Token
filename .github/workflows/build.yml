@@ -1,0 +1,40 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Keycloak ${{ matrix.keycloak }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Integration tests run against a real Keycloak in Docker (Testcontainers).
+        # 26.8.2 is the minimum: older versions do not keep PAT tokens off the Admin API.
+        keycloak: ["26.8.2"]
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+
+      - name: Build and test
+        env:
+          KEYCLOAK_VERSION: ${{ matrix.keycloak }}
+        run: mvn -B verify
+
+      - name: Upload provider jar
+        if: matrix.keycloak == '26.8.2'
+        uses: actions/upload-artifact@v7
+        with:
+          name: keycloak-personal-access-token
+          path: target/keycloak-personal-access-token-*.jar
