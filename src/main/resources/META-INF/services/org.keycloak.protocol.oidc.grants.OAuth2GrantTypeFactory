@@ -1,0 +1,4 @@
+com.cloudiam.keycloak.pat.PatGrantTypeFactory
+com.cloudiam.keycloak.pat.guard.PatSafeTokenExchangeGrantTypeFactory
+com.cloudiam.keycloak.pat.guard.PatSafePermissionGrantTypeFactory
+com.cloudiam.keycloak.pat.guard.PatSafeJWTAuthorizationGrantTypeFactory
