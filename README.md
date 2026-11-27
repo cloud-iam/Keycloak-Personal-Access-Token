@@ -1,4 +1,4 @@
-# Keycloak Personal Access Token
+![Keycloak Personal Access Token](.github/assets/banner.png)
 
 [![build](https://github.com/cloud-iam/Keycloak-Personal-Access-Token/actions/workflows/build.yml/badge.svg)](https://github.com/cloud-iam/Keycloak-Personal-Access-Token/actions/workflows/build.yml)
 [![license](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
